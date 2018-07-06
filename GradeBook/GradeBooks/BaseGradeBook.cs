@@ -8,13 +8,13 @@ using System.Linq;
 
 namespace GradeBook.GradeBooks
 {
-    public class BaseGradeBook
+    public abstract class BaseGradeBook
     {
         public string Name { get; set; }
         public GradeBookType Type { get; set; }
         public List<Student> Students { get; set; }
 
-        public BaseGradeBook(string name)
+        protected BaseGradeBook(string name)
         {
             Name = name;
             Students = new List<Student>();
